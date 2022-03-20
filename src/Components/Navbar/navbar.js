@@ -1,8 +1,8 @@
 import React from 'react'
 import './navbar.scss'
 import logo from '../../Images/logo.svg'
-import line from '../../Images/line.svg'
 import { NavLink } from 'react-router-dom'
+import {FcMenu} from 'react-icons/fc'
 
 const Navbar = () => {
   return (
@@ -38,6 +38,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+          <div className = 'menu'>
+            <FcMenu/>
+          </div>
       </div>
     </div>
   )

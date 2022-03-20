@@ -1,22 +1,41 @@
 .hero{
   background:no-repeat url('../../Images/homeExplore.svg') ;
-  height: 100vh;
-  @media screen and (max-width: 1024px) {
+  background-size: cover;
+  // height: 100vh;
+  @media screen and (min-width:768px) and (max-width: 1024px) {
     background:no-repeat url('../../Images/tabbg.svg') ;
     background-size: cover;
-
+    // height: 100%;
+  }
+  @media screen and (max-width:440px){
+    background:no-repeat url('../../Images/mob.svg') ;
+    background-size: cover;
   }
 }
 .hero-explore{
-  padding: 15.75rem 10.25rem 0;
+  padding: 15.75rem 10.25rem 5rem;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  @media screen and (max-width: 1024px) {
-    padding: 19.75rem 4rem 0
+  @media screen and (min-width:0px) and (max-width: 1024px) {
+    padding: 6.625rem 4rem 5.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
+  @media screen and (max-width:440px){
+    padding: 58px 0;
   }
   .hero-text{
     width: 450px;
+    @media screen and (min-width:768px) and (max-width: 1024px) {
+      padding-bottom: 9.75rem;
+      // padding-bottom: 9.75rem;
+    }
+    @media screen and (max-width:440px){
+      width: 324px;
+    }
     h4{
       text-transform: uppercase;
       font-size: 28px;
@@ -36,6 +55,9 @@
       text-transform:uppercase;
       margin: 0;
       margin-top: 1.5rem;
+      @media screen and (max-width:440px){
+        font-size: 80px;
+      }
     }
     h6{
       font-family: 'Barlow';
@@ -45,6 +67,9 @@
       line-height: 32px;
       color: #D0D6F9;
       text-align: left;
+      @media screen and (min-width:0px) and (max-width: 1024px) {
+        text-align: center ;
+      }
     }
   }
   .hero-btn{
@@ -57,11 +82,52 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    a{
-      letter-spacing: 2px;
-      color: #0B0D17;
-      text-transform: capitalize;
-      font-weight: 400;
+    color: #0B0D17;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-weight: 400;
+    @media screen and (max-width: 769px) {
+      width: 15.125rem;
+      height: 15.125rem;
     }
+    @media screen and (max-width:440px){
+      width: 9.375rem;
+      height: 9.375rem;
+      font-size: 20px;
+    }
+  }
+  .hero-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top:0;
+    width: 17.125rem;
+    height: 17.125rem;
+    opacity: 0;
+    transition: all 0.75s;
+    box-shadow: 0 0 10px 40px rgba(255, 255, 255, 0.385);
+    @media screen and (max-width: 769px) {
+      width: 15.125rem;
+      height: 15.125rem;
+    }
+    @media screen and (max-width:440px){
+      width: 9.375rem;
+      height: 9.375rem;
+      font-size: 20px;
+    }
+  }
+  
+  .hero-btn:active:after {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.487);
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
   }
 }
