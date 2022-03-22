@@ -11,9 +11,7 @@ const Navbar = () => {
         <img src = {logo} alt = 'logo' className = 'logo'/>
       </div>
       <div className = 'navroutes'>
-        <div className='line'>
-          
-        </div>
+        <div className='line'/>
         <div className='routes'>
           <ul>
             <li>

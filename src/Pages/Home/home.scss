@@ -1,19 +1,26 @@
 .hero{
   background:no-repeat url('../../Images/homeExplore.svg') ;
   background-size: cover;
-  // height: 100vh;
+  height: 100vh;
   @media screen and (min-width:768px) and (max-width: 1024px) {
     background:no-repeat url('../../Images/tabbg.svg') ;
     background-size: cover;
-    // height: 100%;
+    height: 100%;
   }
-  @media screen and (max-width:440px){
-    background:no-repeat url('../../Images/mob.svg') ;
+  @media screen and (min-height:1180px) and (max-height: 1366px) {
+    height: 100vh
+  }
+  @media screen and (max-height: 667px) {
+    height: 100%;
+  }
+  @media screen and (max-width:414px) and (min-height: 668px){
+    background:no-repeat url('../../Images/tabbg.svg') ;
     background-size: cover;
+    height: 100vh;
   }
 }
 .hero-explore{
-  padding: 15.75rem 10.25rem 5rem;
+  padding: 15.6875rem 10.25rem 8.188rem;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -24,17 +31,17 @@
     align-items: center;
     justify-content:center;
   }
-  @media screen and (max-width:440px){
+  @media screen and (max-width:414px) {
     padding: 58px 0;
   }
   .hero-text{
     width: 450px;
     @media screen and (min-width:768px) and (max-width: 1024px) {
       padding-bottom: 9.75rem;
-      // padding-bottom: 9.75rem;
     }
-    @media screen and (max-width:440px){
+    @media screen and (max-width:414px) {
       width: 324px;
+      padding-bottom: 5.06275rem;
     }
     h4{
       text-transform: uppercase;
@@ -55,8 +62,9 @@
       text-transform:uppercase;
       margin: 0;
       margin-top: 1.5rem;
-      @media screen and (max-width:440px){
+      @media screen and (max-width:414px) {
         font-size: 80px;
+        line-height: 100px;
       }
     }
     h6{
@@ -67,8 +75,14 @@
       line-height: 32px;
       color: #D0D6F9;
       text-align: left;
+      margin: 0;
+      margin-top: 24px;
       @media screen and (min-width:0px) and (max-width: 1024px) {
         text-align: center ;
+      }
+      @media screen and (max-width:414px) {
+        font-size: 15px;
+        line-height: 25px;
       }
     }
   }
@@ -92,7 +106,7 @@
       width: 15.125rem;
       height: 15.125rem;
     }
-    @media screen and (max-width:440px){
+    @media screen and (max-width:414px) {
       width: 9.375rem;
       height: 9.375rem;
       font-size: 20px;
@@ -108,13 +122,13 @@
     width: 17.125rem;
     height: 17.125rem;
     opacity: 0;
-    transition: all 0.75s;
+    transition: all 0.5s;
     box-shadow: 0 0 10px 40px rgba(255, 255, 255, 0.385);
     @media screen and (max-width: 769px) {
       width: 15.125rem;
       height: 15.125rem;
     }
-    @media screen and (max-width:440px){
+    @media screen and (max-width:414px) {
       width: 9.375rem;
       height: 9.375rem;
       font-size: 20px;
