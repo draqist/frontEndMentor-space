@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from '../../Components/Navbar/navbar'
-import doug from '../../Images/doug.svg'
+import { getCrews } from '../../data'
 import './crew.scss'
 
 const Crew = () => {
+  let crew = getCrews()
+  // console.log(crew)
+  const [data, setData] = useState(crew[0])
   return (
     <div className='crew'>
       <Navbar/>
@@ -14,44 +17,46 @@ const Crew = () => {
       <main className='hero-crew'>
         <div className = 'hero-crew-routes'>
           <div className='crew-info'>
-            <h3>commander</h3>
-            <h1>Douglas Hurley</h1>
-            <h6>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</h6>
-            <div className='crew-geo'>
+            <div>
+              <h3>{data.rank }</h3>
+              <h1>{ data.name }</h1>
+              <h6>{ data.bio }</h6>
+            </div>
+            {/* <div className='crew-geo'>
+            </div> */}
               <div className='crew-routes'>
                 <ul>
-                  <li>
-                    <NavLink to='#' className='hero-btn'>
+                  <li onClick = {()=>setData(crew[0])}>
+                    <a href='#commander'>
                       <div className = 'circ'>
                       </div>
-                    </NavLink>
+                    </a>
                   </li>
-                  <li>
-                    <NavLink to='#' className='hero-btn'>
+                  <li onClick = {()=>setData(crew[1])}>
+                    <a href='#missionspecialist'>
                       <div className = 'circ'>
                       </div>
-                    </NavLink>
+                    </a>
                   </li>
-                  <li>
-                    <NavLink to='#' className='hero-btn'>
+                  <li onClick = {()=>setData(crew[2])}>
+                    <a href='#pilot'>
                       <div className = 'circ'>
                       </div>
-                    </NavLink>
+                    </a>
                   </li>
-                  <li>
-                    <NavLink to='#' className='hero-btn'>
+                  <li onClick = {()=>setData(crew[3])}>
+                    <a href='#flightengineer'>
                       <div className = 'circ'>
                       </div>
-                    </NavLink>
+                    </a>
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
         </div>
         <div className='hero-crew-image'>
           <div>
-            <img src={ doug } alt = 'crew' className='crew-image'/>
+            <img src={ data.image} alt = 'crew' className='crew-image'/>
           </div>
         </div>
       </main>

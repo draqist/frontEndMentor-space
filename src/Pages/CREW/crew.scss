@@ -1,6 +1,7 @@
 .crew{
   background:no-repeat url('../../Images/des.svg') ;
   background-size: cover;
+  // height: 100vh;
   @media screen and (min-width:768px) and (max-width: 1025px) {
     background:no-repeat url('../../Images/des.svg') ;
     background-size: cover;
@@ -11,6 +12,7 @@
     // height: 100vh;
   }
   .crew-heading{
+    height: 58px;
     h4{
       text-align: left;
       font-family: 'Barlow Condensed';
@@ -49,6 +51,7 @@
     justify-content:space-between;
     padding-left:10.375rem;
     padding-right:8.563rem;
+    height:78.4995%;
     @media screen and (min-width:450px) and (max-width: 1024px) {
       padding: 60px 4rem 0rem;
       display: flex;
@@ -59,7 +62,7 @@
     }
     @media screen and (min-width:320px) and (max-width: 449px){
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
       justify-content:center;
       text-align: center;
@@ -67,35 +70,43 @@
     }
     .hero-crew-image{
       .crew-image{
+        position: relative;
+        top:4px;
         @media screen and (min-width:415px) and (max-width: 1024px) {
           width: 456.37px;
         }
         @media screen and(min-width:0px) and (max-width:414px) {
           margin: 2rem 0;
-          width: 170px;
+          width: 327px;
         }
       }
     }
     .hero-crew-routes{
       text-align: left;
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items:flex-start;
       @media screen and (max-width: 1024px){
         align-items: center;
       }
       @media screen and (max-width: 1024px){
         width: 100%;
+        margin-top: 32px;
       }
     .crew-info{
-      padding-bottom: 6rem;
-      padding-bottom: 6rem;
+      padding-bottom: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       @media screen and (max-width: 1024px){
+        flex-direction: column-reverse;
+        align-items: center;
         width: 458px;
         text-align: center;
       }
       @media screen and (max-width:414px) {
         width: 327px;
+        margin-top: -7rem;
       }
       h3{
         font-family: 'Bellefair';
@@ -109,59 +120,69 @@
         opacity: 0.5;
         margin: 0;
       }
-      .crew-geo{
-        width: 344px;
-        margin-top: 1.75rem;
+      .crew-routes{
+        width: 132px;
+        height: 15px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .crew-routes{
-          width: 132px;
+        align-items:center;
+        justify-content:center;
+        margin-top: 120px;
+        .circ{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: white;
+        }
+        @media screen and (max-width: 1024px) {
           display: flex;
           align-items:center;
           justify-content:center;
-          .circ{
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background-color: white;
+          flex-direction: column-reverse;
+        }
+        @media screen and (max-width: 420px) {
+          font-size: 14px;
+          margin-bottom: 12px;
+          padding-bottom: 0;
+        }
+        ul{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-family: 'Barlow Condensed';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 2.7px;
+          padding: 0;
+          @media screen and (max-width: 420px) {
+            font-size: 14px;
+            padding-bottom: 18px;
           }
-          @media screen and (max-width: 1024px) {
-            display: flex;
-            align-items:center;
-            justify-content:center;
-          }
-          ul{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-family: 'Barlow Condensed';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            letter-spacing: 2.7px;
-            padding: 0;
-            @media screen and (max-width: 420px) {
-              font-size: 14px;
-            }
-            li{
-              list-style: none;
-              margin: 0;
-              color:#FFFFFF;
-              a{
+          li{
+            list-style: none;
+            margin: 0;
+            color:#FFFFFF;
+            a{
+              color: white;
+              mix-blend-mode: normal;
+              opacity: 0.17;
+              text-decoration: none;
+              text-transform: uppercase;
+              ::active{
                 color: white;
-                text-decoration: none;
-                text-transform: uppercase
+                opacity: 1;
+              }
+              ::hover{
+                mix-blend-mode: normal;
+                opacity: 0.5;
               }
             }
           }
         }
-        @media screen and (max-width: 1024px){
-          justify-content: space-around;
-          width: 100%;
-        }
+      }
+      .crew-geo{
         @media screen and (max-width:414px) {
           flex-direction: column;
           .dist{
@@ -209,7 +230,7 @@
         margin: 0;
         margin-block-start: 0em;
         margin-block-end: 0em;
-        // margin-top: 14px;
+        margin-top: 28px;
         // margin-bottom: 120px;
         @media screen and (min-width:0px) and (max-width: 1024px) {
           width: 458px;
@@ -217,15 +238,16 @@
           font-size: 16px;
           line-height: 28px;
         }
-        // @media screen and (max-width:414px) {
-        //   font-family: 'Barlow';
-        //   font-style: normal;
-        //   font-weight: 400;
-        //   font-size: 15px;
-        //   line-height: 25px;
-        //   margin-top: 0;
-        //   margin-bottom: 2rem;
-        // }
+        @media screen and (max-width:414px) {
+          width: unset;
+          font-family: 'Barlow';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 25px;
+          margin-top: 0;
+          margin-bottom: 2rem;
+        }
       }
     }
   }
