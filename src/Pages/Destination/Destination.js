@@ -1,10 +1,12 @@
-import React from 'react'
-import { NavLink,Link } from 'react-router-dom'
+import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar/navbar'
-import moon from '../../Images/moon.svg'
 import './des.scss'
+import { getDestinations } from '../../data'
 
 const Destination = () => {
+  let destination = getDestinations()
+  const [data, setData] = useState(destination[0])
+
   return (
     <div className='destination'>
       <Navbar/>
@@ -14,46 +16,40 @@ const Destination = () => {
       <main className='hero-destination'>
         <div className='hero-dest-image'>
           <div>
-            <img src={ moon } alt = 'destination image' className='dest-image'/>
+            <img src={data.image} alt = 'destination image' className='dest-image'/>
           </div>
         </div>
         <div className = 'hero-dest-routes'>
           <div className='dest-routes'>
             <ul>
-              <li>
-                <NavLink to='#' className='hero-btn'>
+              <li onClick= {() => setData(destination[0])}>
+                <a href= '#0'>
                   Moon
-                </NavLink>
+                </a>
               </li>
-              <li>
-                <NavLink to='#' className='hero-btn'>
-                  Mars
-                </NavLink>
+              <li onClick= {() => setData(destination[1])}>
+                <a href='#0'>Mars</a>  
               </li>
-              <li>
-                <NavLink to='#' className='hero-btn'>
-                  Europa
-                </NavLink>
+              <li onClick= {() => setData(destination[2])}>
+                  <a href='#0'>Europa</a>
               </li>
-              <li>
-                <NavLink to='#' className='hero-btn'>
-                  Titan
-                </NavLink>
+              <li onClick= {() => setData(destination[3])}>
+                  <a href='#0'>Titan</a>
               </li>
             </ul>
           </div>
           <div className='dest-info'>
-            <h1>Moon</h1>
-            <h6>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</h6>
+            <h1>{data.name}</h1>
+            <h6>{data.brief}</h6>
             <div className='dest-line' />
             <div className='dest-geo'>
               <div className='dist'>
-                <h4> avg. distance</h4>
-                <h1>225 mil.km</h1>
+                <h4> Avg. Distance</h4>
+                <h1>{data.avg_distance}</h1>
               </div>
               <div className='time'>
                 <h4>Est. travel time</h4>
-                <h1>9 months</h1>
+                <h1>{data.est_travel}</h1>
               </div>
             </div>
           </div>

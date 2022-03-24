@@ -1,6 +1,9 @@
 .destination{
   background:no-repeat url('../../Images/des.svg') ;
   background-size: cover;
+  @media screen and (min-height: 1365px) {
+    height: 100vh;
+  }
   @media screen and (min-width:768px) and (max-width: 1025px) {
     background:no-repeat url('../../Images/des.svg') ;
     background-size: cover;
@@ -8,7 +11,6 @@
   @media screen and (max-width:414px) and (min-height: 668px){
     background:no-repeat url('../../Images/des.svg') ;
     background-size: cover;
-    // height: 100vh;
   }
   .heading{
     h4{
@@ -47,7 +49,7 @@
     display: flex;
     align-items:flex-end;
     justify-content:space-between;
-    padding: 4rem 10.375rem 6.795rem;
+    padding: 4rem 10.375rem 7.375rem;
     @media screen and (min-width:450px) and (max-width: 1024px) {
       padding: 2.5rem 4rem 5.625rem;
       display: flex;
@@ -66,8 +68,9 @@
     }
     .hero-dest-image{
       position: relative;
+      margin-top: 23px;
       .dest-image{
-        margin-top: 6rem;
+        // margin-top: 6rem;
         position: relative;
         top: 0;
         left: 72px;
@@ -96,6 +99,7 @@
       }
       .dest-routes{
         width: 285px;
+        height: 34px;
         display: flex;
         align-items:center;
         justify-content:center;
@@ -103,7 +107,6 @@
           display: flex;
           align-items:center;
           justify-content:center;
-          // text-align:center
         }
         ul{
           width: 100%;
@@ -123,11 +126,35 @@
           li{
             list-style: none;
             margin: 0;
+            font-weight: 400;
             color:#FFFFFF;
-            a{
+            cursor: pointer;
+            a {
+              display: block;
+              position: relative;
+              padding: 8px 0;
+              overflow: hidden;
               color: white;
-              text-decoration: none;
-              text-transform: uppercase
+            }
+            a::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 0.1em;
+              background-color: white;
+              opacity: 0;
+              transition: opacity 300ms, transform 300ms;
+            }
+            a::after {
+              opacity: 1;
+              transform: translate3d(-100%, 0, 0);
+            }
+            
+            a:hover::after,
+            a:focus::after{
+              transform: translate3d(0, 0, 0);
             }
           }
         }
