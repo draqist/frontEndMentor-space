@@ -12,6 +12,9 @@
     background:no-repeat url('../../Images/des.svg') ;
     background-size: cover;
   }
+  @media screen and (min-width:1400px) {
+    height: 100vh
+  }
   .heading{
     h4{
       text-align: left;

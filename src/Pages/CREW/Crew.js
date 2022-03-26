@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
 import Navbar from '../../Components/Navbar/navbar'
 import { getCrews } from '../../data'
 import './crew.scss'
 
 const Crew = () => {
   let crew = getCrews()
-  // console.log(crew)
   const [data, setData] = useState(crew[0])
   return (
     <div className='crew'>
