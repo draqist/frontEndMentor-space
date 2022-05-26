@@ -83,12 +83,14 @@
       text-align: left;
       display: flex;
       height: 100%;
-      // flex-direction: column;
       align-items:flex-start;
       @media screen and (max-width: 1024px){
         align-items: center;
       }
-      @media screen and (max-width: 1024px){
+      @media screen and (max-width: 414px){
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
         width: 100%;
       }
       .tech-routes{
@@ -98,11 +100,17 @@
         align-items:flex-start;
         justify-content:center;
         padding-right: 80px;
+        @media screen and (max-width: 414px) {
+          justify-content:space-between;
+          padding-right: 0px;
+          text-align:center;
+          width: 100%;
+        }
         @media screen and (max-width: 1024px) {
           display: flex;
           align-items:center;
           justify-content:center;
-          // text-align:center
+          // text-align:center;
         }
         ul{
           display: flex;
@@ -116,14 +124,20 @@
           line-height: 19px;
           letter-spacing: 2.7px;
           padding: 0;
-          @media scrugheen and (max-width: 420px) {
+          @media screen and (max-width: 420px) {
+            flex-direction: row ;
             font-size: 14px;
+            width: 100%;
+
           }
           li{
             list-style: none;
             margin: 0;
             color:#FFFFFF;
             padding-bottom:100%;
+            @media screen and (max-width: 420px) {
+              padding-bottom:0;
+            }
             a{
               color: white;
               text-decoration: none;
@@ -144,6 +158,13 @@
                 line-height: 37px;
                 letter-spacing: 2px;
                 color: #0B0D17;
+                @media scrugheen and (max-width: 420px) {
+                  font-size: 14px;
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 50%;
+                  background-color: white;
+                }
               }
             }
           }
@@ -180,8 +201,8 @@
           font-family: 'Bellefair';
           font-style: normal;
           font-weight: 400;
-          font-size: 56px;
-          line-height: 64px;
+          font-size: 32px;
+          line-height: unset;
           text-align: center;
         }
       }
